@@ -7,3 +7,12 @@ drive.mount('/content/drive')
 import ultralytics
 ultralytics.checks()  # this part checks if gpu is available
 
+
+----
+
+!nvidia-smi  # shows current gpu setup and configs 
+
+----
+
+!yolo task=detect mode=train model=yolov8n.pt data={dataset.location}/data.yaml epochs=50 imgsz=640 plots=True # training the model and the hyperparams.
+
